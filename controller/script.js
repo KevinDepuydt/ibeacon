@@ -37,16 +37,16 @@ $(function(){
 			verif = false;
 		}
 
-		if ($("#password").length() < 6) {
+		if ($("#password").val().length() < 6) {
 			alert("Mot de passe trop court")
 			verif = false;
 		}
 
-		if ($("passwordverify").val() != $("#password")) {
+		if ($("#passwordverify").val() != $("#password").val()) {
 			alert("vérification de mot de passe incorecte")
 			verif = false;
 		}
 
 		return verif;
-	})
-})
+	});
+});
