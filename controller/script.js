@@ -1,5 +1,5 @@
 $(function(){
-	$("#formulaire").submit(function(event){
+	$("#inscriptionform").submit(function(event){
 		var verif = true;
 		var zipcode = /^((0[1-9])|([1-8][0-9])|(9[0-8])|(2A)|(2B))[0-9]{3}$/;
 		// \d{2}[ ]?\d{3}
@@ -18,7 +18,7 @@ $(function(){
 			verif = false;
 		}
 
-		if ($("#zipCode").val()== var zipcode) {
+		if ($("#zipcode").val()== var zipcode) {
 			alert("Code postale non valide.")
 			verif = false;
 		}
@@ -43,7 +43,7 @@ $(function(){
 			verif = false;
 		}
 
-		if ($("passwordVerify").val() != $("#password")) {
+		if ($("passwordverify").val() != $("#password")) {
 			alert("vérification de mot de passe incorecte")
 			verif = false;
 		}
