@@ -2,10 +2,11 @@
  * Created by Kévin on 02/03/2015.
  */
 $.(function () {
-    $.('#inscription_form').submit(function () {
-        var valid = true;
-
-        if (valid) return true;
+    $.('#inscriptionform').submit(function () {
+        // var valid = true;
+        alert("Yolo");
         return false;
-    })
+
+        // if (valid) return true;
+    });
 });

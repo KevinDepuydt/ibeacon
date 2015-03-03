@@ -1,11 +1,10 @@
 $(function(){
-	$("#inscriptionform").submit(function(event){
+	$("#inscriptionform").submit(function(){
 		var verif = true;
 		var zipcode = /^((0[1-9])|([1-8][0-9])|(9[0-8])|(2A)|(2B))[0-9]{3}$/;
-		// \d{2}[ ]?\d{3}
 		var mail = /^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/;
-		var telephone = \^(\d\d\s){4}(\d\d)$\;
-		var ville = ^[a-zéèêëàâîïôöûü-]+$;
+		var telephone = /^(\d\d\s){4}(\d\d)$/;
+		var ville = /^[a-zéèêëàâîïôöûü-]+$/;
 
 
 		if ($("#lastname").val()=="") {
@@ -18,22 +17,22 @@ $(function(){
 			verif = false;
 		}
 
-		if ($("#zipcode").val()== var zipcode) {
+		if (!zipcode.test($("#zipcode").val())) {
 			alert("Code postale non valide.")
 			verif = false;
 		}
 
-		if ($("#email").val()== var mail) {
+		if (!mail.test($("#email").val())) {
 			alert("Adresse mail non valide.")
 			verif = false;
 		}
 
-		if ($("#tel").val()== var telephone) {
+		if (!telephone.test($("#tel").val())) {
 			alert("téléphone non valide.")
 			verif = false;
 		}
 
-		if ($("#city").val()== var ville) {
+		if (!ville.test($("#city").val())) {
 			alert("Ville non valide.")
 			verif = false;
 		}

@@ -22,12 +22,13 @@ if (isset($_POST['send'])) {
 } else {
     echo "Merci de remplir les champs suivants puis de valider";
     ?>
-    <form action="" method="post" id="inscription_form">
+    <form action="" method="post" id="inscriptionform">
         <input type="hidden" name="send" id="send">
         <table>
             <tr>
                 <td><label for="lastname">Nom</label></td>
                 <td><input type="text" name="lastname" id="lastname"></td>
+                <td></td>
             </tr>
             <tr>
                 <td><label for="firstname">Prénom</label></td>
