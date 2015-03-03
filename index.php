@@ -20,8 +20,10 @@ $bdd = new PDO('mysql:host=localhost;dbname=ibeacon', 'root', '', [
     </head>
     <body>
         <?php
-        echo "index<br>";
-        require_once 'model/inscription.php'; // page inscription
+        if (isset($_GET['connect'])) require_once 'model/connection.php';
+        if (isset($_GET['inscription'])) require_once 'model/inscription.php'; // page inscription
         ?>
+        <a href="?connect">Connexion</a><br>
+        <a href="?inscription">Inscription</a>
     </body>
 </html>

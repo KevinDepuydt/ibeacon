@@ -18,7 +18,7 @@ if (isset($_POST['send'])) {
         'tel' => $_POST['tel'],
         'password' => sha1($_POST['password'])
     ]);
-    echo "Inscription réussie";
+    echo "Inscription réussie<br>";
 } else {
     echo "<br>Merci de remplir les champs suivants puis de valider";
     ?>
