@@ -20,7 +20,7 @@ if (isset($_POST['send'])) {
     ]);
     echo "Inscription réussie";
 } else {
-    echo "Merci de remplir les champs suivants puis de valider";
+    echo "<br>Merci de remplir les champs suivants puis de valider";
     ?>
     <form action="" method="post" id="inscriptionform">
         <input type="hidden" name="send" id="send">
@@ -28,7 +28,7 @@ if (isset($_POST['send'])) {
             <tr>
                 <td><label for="lastname">Nom</label></td>
                 <td><input type="text" name="lastname" id="lastname"></td>
-                <td></td>
+                <td id="errlastname"></td>
             </tr>
             <tr>
                 <td><label for="firstname">Prénom</label></td>
@@ -56,11 +56,11 @@ if (isset($_POST['send'])) {
             </tr>
             <tr>
                 <td><label for="password">Mot de passe</label></td>
-                <td><input type="text" name="password" id="password"></td>
+                <td><input type="password" name="password" id="password"></td>
             </tr>
             <tr>
                 <td><label for="passwordverify">Vérification</label></td>
-                <td><input type="text" name="passwordverify" id="passwordverify"></td>
+                <td><input type="password" name="passwordverify" id="passwordverify"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Submit"></td>
