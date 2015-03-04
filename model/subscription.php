@@ -33,34 +33,42 @@ if (isset($_POST['send'])) {
             <tr>
                 <td><label for="firstname">Prénom</label></td>
                 <td><input type="text" name="firstname" id="firstname"></td>
+                <td id="errfirstname"></td>
             </tr>
             <tr>
                 <td><label for="email">Mail</label></td>
                 <td><input type="text" name="email" id="email" placeholder="Votre identifiant"></td>
+                <td id="erremail"></td>
             </tr>
             <tr>
                 <td><label for="adress">Adresse</label></td>
                 <td><input type="text" name="adress" id="adress"></td>
+                <td id="erradress"></td>
             </tr>
             <tr>
                 <td><label for="zipcode">Code Postal</label></td>
                 <td><input type="text" name="zipcode" id="zipcode"></td>
+                <td id="errzipcode"></td>
             </tr>
             <tr>
                 <td><label for="city">Ville</label></td>
                 <td><input type="text" name="city" id="city"></td>
+                <td id="errcity"></td>
             </tr>
             <tr>
                 <td><label for="tel">Téléphone</label></td>
                 <td><input type="text" name="tel" id="tel" placeholder="(optionnel)"></td>
+                <td id="errtel"></td>
             </tr>
             <tr>
                 <td><label for="password">Mot de passe</label></td>
                 <td><input type="password" name="password" id="password"></td>
+                <td id="errpassword"></td>
             </tr>
             <tr>
                 <td><label for="passwordverify">Vérification</label></td>
                 <td><input type="password" name="passwordverify" id="passwordverify"></td>
+                <td id="errpasswordverify"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Submit"></td>

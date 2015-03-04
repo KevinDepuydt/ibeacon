@@ -1,10 +1,5 @@
-/**
- * Created by Kévin on 02/03/2015.
- */
 $(document).ready(function(){
     $("#inscriptionform").submit(function(){
-
-        console.clear();
 
         var verif = true;
         var zipcode = /^((0[1-9])|([1-8][0-9])|(9[0-8])|(2A)|(2B))[0-9]{3}$/;
@@ -17,46 +12,45 @@ $(document).ready(function(){
         }
 
         if ($("#firstname").val().length <= 3) {
-            console.log("Vous devez rentrer un prénom de plus de 3 caractères");
+            $("#errfirstname").text("Vous devez rentrer un prénom de plus de 3 caractères");
             verif = false;
         }
 
         if (!mail.test($("#email").val())) {
-            console.log("Adresse mail non valide.");
+            $("#erremail").text("Adresse mail non valide.");
             verif = false;
         }
 
         if ($("#adress").val().length < 8) {
-            console.log("L'adresse semble trop courte");
+            $("#erradress").text("L'adresse semble trop courte");
             verif = false;
         }
 
         if (!zipcode.test($("#zipcode").val())) {
-            console.log("Code postale non valide.");
-            verif = false;
-        }
-
-        if ($("#tel").val().length > 0 && !telephone.test($("#tel").val())) {
-            console.log("téléphone non valide.");
+            $("#errzipcode").text("Code postale non valide.");
             verif = false;
         }
 
         if ($("#city").val().length < 3) {
-            console.log("Ville non valide.");
+            $("#errcity").text("Ville non valide.");
             verif = false;
         }
 
+        if ($("#tel").val().length > 0 && !telephone.test($("#tel").val())) {
+            $("#errtel").text("téléphone non valide.");
+            verif = false;
+        }
+
+
         if ($("#password").val().length < 6) {
-            console.log("Mot de passe trop court");
+            $("#errpassword").text("Mot de passe trop court");
             verif = false;
         }
 
         if ($("#passwordverify").val() != $("#password").val()) {
-            console.log("vérification de mot de passe incorecte");
+            $("#errpasswordverify").text("vérification de mot de passe incorecte");
             verif = false;
         }
-
-        console.log("verif : "+verif);
 
         return verif;
     });
