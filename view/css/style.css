@@ -1,19 +1,23 @@
+::-webkit-scrollbar { /** la barre en entier **/
+    width: 10px;
+}
+::-webkit-scrollbar-thumb { /** l'ascenseur **/
+    background-color: #2b3036;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #dbdedf;
+}
+
 /** FONTS **/
 @font-face {
     font-family: 'MontserratRegular';
     src: url('../fonts/Montserrat-Regular.ttf');
 }
 
-@font-face {
-    font-family: 'MontserratBold';
-    font-weight: bold;
-    src: url('../fonts/Montserrat-Bold.ttf');
-}
 /** BODY (content) **/
 
 body {
-    width: 1350px;
-    margin: 0 auto;
     font-family: 'MontserratRegular', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -23,6 +27,8 @@ body {
 /** NAVIGATION **/
 
 #navigation {
+    width: 1350px;
+    margin: 0 auto;
     height: 90px;
     line-height: 90px;
 }
@@ -30,6 +36,7 @@ body {
 #navigation #logo {
     margin-left: 180px;
     height: 90px;
+    padding: 5px;
 }
 
 #navigation #menu {
@@ -58,16 +65,16 @@ body {
     height: 550px;
     background-color: #878f93;
     color: #dbdedf;
+    border-top: 1px solid #f4f4f4;
 }
 
-#header #bloctext {
+#header .bloctext {
     height: 180px;
-    position: relative;
-    top: 190px;
+    padding-top: 190px;
 }
 
 #header .text{
-    font-size: 19px;
+    font-size: 18px;
     text-align: center;
     line-height: 40px;
     letter-spacing: -1px;
@@ -78,4 +85,318 @@ body {
     line-height: 50px;
     font-size: 32px;
     color: white;
+}
+
+/** DISCOVER **/
+
+#discover {
+    border-top: 1px solid #f4f4f4;
+    height: 750px;
+    background-color: white;
+}
+
+#discover .bloctext {
+    padding-top: 140px;
+    padding-bottom: 110px;
+}
+
+#discover .text{
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: -1px;
+    font-weight: 200;
+    color: #737e84;
+}
+
+#discover .text .title {
+    line-height: 50px;
+    font-size: 28px;
+    color: #2b3036;
+}
+
+#discover .content {
+    height: 300px;
+    text-align: center;
+}
+
+#discover .content .element {
+    width: 300px;
+    height: 100%;
+    display: inline-block;
+}
+
+#discover .content .element .circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #46b2e6;
+    margin: 0 auto;
+}
+
+#discover .content .element .title {
+    font-size: 23px;
+    padding: 30px 0;
+    color: #2b3036;
+}
+
+#discover .content .element .text {
+    margin: 0 auto;
+    width: 190px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/** image list **/
+
+/** Discover our features **/
+#placement{
+    border-top: 1px solid #f4f4f4;
+    background-color: #fbfbfb;
+    padding-bottom: 140px;
+}
+
+#placement .bloctext {
+    padding-bottom: 110px;
+}
+
+#placement .text{
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: -1px;
+    font-weight: 200;
+    color: #737e84;
+}
+
+#placement .text .title {
+    line-height: 50px;
+    font-size: 28px;
+    color: #2b3036;
+}
+
+#placement-image{
+    width: 950px;
+    margin: 0 auto;
+}
+
+#placement-image .image {
+    width: 300px;
+    height: 270px;
+    margin: 2px;
+    border-radius: 2px;
+    border: 1px solid #f4f4f4;
+}
+
+/** connexion **/
+
+#formconnection {
+    text-align: center;
+    width: 400px;
+    padding: 10px 0;
+    margin: 80px auto 0 auto;
+}
+
+#formconnection table {
+    width: 100%;
+}
+
+#formconnection .text {
+    color: #2b3036;
+    font-size: 18px;
+    margin-bottom: 70px;
+}
+
+#formconnection .error {
+    color: rgb(217, 49, 49);
+}
+
+#formconnection .success {
+    color: rgb(37, 128, 0);
+}
+
+#formconnection .champform {
+    width: 330px;
+    height: 40px;
+    padding: 5px 10px;
+    margin: 4px auto;
+    border: 1px solid #d8dfe2;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+
+}
+
+#formconnection .champform:focus {
+    border-color: #aab0b3;
+}
+
+#formconnection .boutonform {
+    font-size: 16px;
+    width: 352px;
+    height: 52px;
+    padding: 5px 10px;
+    margin: 4px auto;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #0098e3;
+    color: white;
+    letter-spacing: 1px;
+    transition: background-color 0.4s;
+}
+
+#formconnection .boutonform:hover {
+    background-color: #00b1f6;
+    cursor: pointer;
+}
+
+/** inscription **/
+
+#forminscription {
+    width: 700px;
+    padding: 10px 0;
+    margin: 80px auto 0 auto;
+}
+
+#inscriptionform {
+    text-align: left;
+    position: relative;
+    left: 175px;
+}
+
+#forminscription .text {
+    color: #2b3036;
+    font-size: 18px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+#forminscription .error {
+    color: rgb(217, 49, 49);
+}
+
+#forminscription .success {
+    color: rgb(37, 128, 0);
+}
+
+#forminscription .champform {
+    width: 330px;
+    height: 40px;
+    padding: 5px 10px;
+    margin: 4px auto;
+    border: 1px solid #d8dfe2;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    display: inline-block;
+}
+
+#forminscription .champform:focus {
+    border-color: #aab0b3;
+}
+
+#forminscription .boutonform {
+    font-size: 16px;
+    width: 352px;
+    height: 52px;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #0098e3;
+    color: white;
+    letter-spacing: 1px;
+    transition: background-color 0.4s;
+}
+
+#forminscription .boutonform:hover {
+    background-color: #00b1f6;
+    cursor: pointer;
+}
+
+#forminscription .errinscription {
+    width: 320px;
+    padding-left: 5px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: rgb(217, 49, 49);
+}
+
+/** product **/
+
+#product {
+    height: 700px;
+    border-top: 1px solid #f4f4f4;
+    background-color: white;
+}
+
+#product .content {
+    width: 1350px;
+    margin: 0 auto;
+}
+
+#product .bloctext {
+    padding-top: 200px;
+    width: 550px;
+    float: right;
+    margin-right: 160px;
+}
+
+#product .text{
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    letter-spacing: -1px;
+    font-weight: 200;
+    color: #737e84;
+    padding-bottom: 20px;
+}
+
+#product .text .title {
+    line-height: 70px;
+    font-size: 28px;
+    color: #2b3036;
+}
+
+#product form {
+    text-align: left;
+}
+
+#product #quantity {
+    width: 70px;
+    height: 15px;
+    font-size: 15px;
+    padding: 15px;
+    border: 1px solid #d8dfe2;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: #9aa1a6;
+}
+
+#product #quantity:focus {
+    border-color: #aab0b3;
+}
+
+#product #buttonpurchase {
+    width: 175px;
+    height: 47px;
+    line-height: 47px;
+    background-color: #0098e3;
+    transition: background-color 0.4s;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+#product #buttonpurchase:hover {
+    background-color: #00b1f6;
+    cursor: pointer;
 }

@@ -70,14 +70,14 @@ if ($routing[$page]['secure'] === true && !isset($_SESSION['user'])) {
     <body>
         <div id="navigation">
             <a href="?page=home" id="logo"><img src="view/images/logo.png" alt="Logo"></a>
-            <ul id="menu">
-                <li class="element">Discover</li>
-                <li class="element">Community</li>
-                <li class="element">Help</li>
-                <li class="element">About</li>
-                <a href="?page=inscription"><li class="element">Inscription</li></a>
-                <a href="?page=login"><li class="element">Connexion</li></a>
-            </ul>
+            <div id="menu">
+                <a href="?page=home#discover" class="element">Discover</a>
+                <a href="?page=home" class="element">Community</a>
+                <a href="?page=home" class="element">Help</a>
+                <a href="?page=home" class="element">About</a>
+                <a href="?page=inscription" class="element">Inscription</a>
+                <a href="?page=login" class="element">Connexion</a>
+            </div>
         </div>
 
 

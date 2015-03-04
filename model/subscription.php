@@ -1,10 +1,5 @@
+<div id="forminscription">
 <?php
-/**
- * Created by PhpStorm.
- * User: Kévin
- * Date: 02/03/2015
- * Time: 17:06
- */
 if (isset($_POST['send'])) {
     $req = $bdd->prepare('INSERT INTO users (lastname, firstname, email, country, city, zipcode, adress, tel, password) VALUES (:lastname, :firstname, :email, :country, :city, :zipcode, :adress, :tel, :password)');
     $req->execute([
@@ -18,62 +13,42 @@ if (isset($_POST['send'])) {
         'tel' => $_POST['tel'],
         'password' => sha1($_POST['password'])
     ]);
-    echo "Inscription réussie<br>";
+    echo "<p class='text'>Inscription réussie</p>";
 } else {
-    echo "<br>Merci de remplir les champs suivants puis de valider";
+    echo "<p class='text'>Veuillez remplir les champs suivants pour vous inscrire</p>";
     ?>
     <form action="" method="post" id="inscriptionform">
         <input type="hidden" name="send" id="send">
-        <table>
-            <tr>
-                <td><label for="lastname">Nom</label></td>
-                <td><input type="text" name="lastname" id="lastname"></td>
-                <td id="errlastname"></td>
-            </tr>
-            <tr>
-                <td><label for="firstname">Prénom</label></td>
-                <td><input type="text" name="firstname" id="firstname"></td>
-                <td id="errfirstname"></td>
-            </tr>
-            <tr>
-                <td><label for="email">Mail</label></td>
-                <td><input type="text" name="email" id="email" placeholder="Votre identifiant"></td>
-                <td id="erremail"></td>
-            </tr>
-            <tr>
-                <td><label for="adress">Adresse</label></td>
-                <td><input type="text" name="adress" id="adress"></td>
-                <td id="erradress"></td>
-            </tr>
-            <tr>
-                <td><label for="zipcode">Code Postal</label></td>
-                <td><input type="text" name="zipcode" id="zipcode"></td>
-                <td id="errzipcode"></td>
-            </tr>
-            <tr>
-                <td><label for="city">Ville</label></td>
-                <td><input type="text" name="city" id="city"></td>
-                <td id="errcity"></td>
-            </tr>
-            <tr>
-                <td><label for="tel">Téléphone</label></td>
-                <td><input type="text" name="tel" id="tel" placeholder="(optionnel)"></td>
-                <td id="errtel"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Mot de passe</label></td>
-                <td><input type="password" name="password" id="password"></td>
-                <td id="errpassword"></td>
-            </tr>
-            <tr>
-                <td><label for="passwordverify">Vérification</label></td>
-                <td><input type="password" name="passwordverify" id="passwordverify"></td>
-                <td id="errpasswordverify"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" value="Submit"></td>
-            </tr>
-        </table>
+
+        <input type="text" name="lastname" id="lastname" placeholder="Nom" class="champform">
+        <div class="errinscription" id="errlastname"></div>
+
+        <input type="text" name="firstname" id="firstname" placeholder="Prenom" class="champform">
+        <div class="errinscription" id="errfirstname"></div>
+
+        <input type="text" name="email" id="email" placeholder="Email ( votre identifiant )" class="champform">
+        <div class="errinscription" id="erremail"></div>
+
+        <input type="text" name="adress" id="adress" placeholder="Adresse" class="champform">
+        <div class="errinscription" id="erradress"></div>
+
+        <input type="text" name="zipcode" id="zipcode" placeholder="Code postal" class="champform">
+        <div class="errinscription" id="errzipcode"></div>
+
+        <input type="text" name="city" id="city" placeholder="Ville" class="champform">
+        <div class="errinscription" id="errcity"></div>
+
+        <input type="text" name="tel" id="tel" placeholder="Téléphone ( facultatif )" class="champform">
+        <div class="errinscription" id="errtel"></div>
+
+        <input type="password" name="password" id="password" placeholder="Mot de passe" class="champform">
+        <div class="errinscription" id="errpassword"></div>
+
+        <input type="password" name="passwordverify" id="passwordverify" placeholder="Vérification du mot de passe" class="champform">
+        <div class="errinscription"  id="errpasswordverify"></div>
+
+        <input type="submit" value="Inscription" class="boutonform">
     </form>
-    <?php
+    </div>
+<?php
 }

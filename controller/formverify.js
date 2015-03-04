@@ -6,18 +6,22 @@ $(document).ready(function(){
         var mail = /^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/;
         var telephone = /(0|\\+33|0033)[1-9][0-9]{8}/;
 
+        $(".errinscription").each(function () {
+            $(this).text('');
+        });
+
         if ($("#lastname").val().length <= 2) {
-            $("#errlastname").text("Vous devez rentrer un nom de plus de 2 caractères");
+            $("#errlastname").text("Le nom est trop court");
             verif = false;
         }
 
         if ($("#firstname").val().length <= 3) {
-            $("#errfirstname").text("Vous devez rentrer un prénom de plus de 3 caractères");
+            $("#errfirstname").text("Le prénom est trop court");
             verif = false;
         }
 
         if (!mail.test($("#email").val())) {
-            $("#erremail").text("Adresse mail non valide.");
+            $("#erremail").text("L'adresse mail n'est pas valide.");
             verif = false;
         }
 
@@ -27,28 +31,28 @@ $(document).ready(function(){
         }
 
         if (!zipcode.test($("#zipcode").val())) {
-            $("#errzipcode").text("Code postale non valide.");
+            $("#errzipcode").text("Le code postal n'est pas valide.");
             verif = false;
         }
 
         if ($("#city").val().length < 3) {
-            $("#errcity").text("Ville non valide.");
+            $("#errcity").text("Le nom de la ville est trop court");
             verif = false;
         }
 
         if ($("#tel").val().length > 0 && !telephone.test($("#tel").val())) {
-            $("#errtel").text("téléphone non valide.");
+            $("#errtel").text("Le téléphone n'est pas valide");
             verif = false;
         }
 
 
         if ($("#password").val().length < 6) {
-            $("#errpassword").text("Mot de passe trop court");
+            $("#errpassword").text("Le mot de passe trop court");
             verif = false;
         }
 
         if ($("#passwordverify").val() != $("#password").val()) {
-            $("#errpasswordverify").text("vérification de mot de passe incorecte");
+            $("#errpasswordverify").text("Les mots de passe ne correspondent pas");
             verif = false;
         }
 
