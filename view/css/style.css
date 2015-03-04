@@ -28,7 +28,7 @@ body {
 }
 
 #navigation #logo {
-    margin-left: 200px;
+    margin-left: 180px;
     height: 90px;
 }
 
@@ -57,4 +57,25 @@ body {
 #header {
     height: 550px;
     background-color: #878f93;
+    color: #dbdedf;
+}
+
+#header #bloctext {
+    height: 180px;
+    position: relative;
+    top: 190px;
+}
+
+#header .text{
+    font-size: 19px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: -1px;
+    font-weight: 200;
+}
+
+#header .text .title {
+    line-height: 50px;
+    font-size: 32px;
+    color: white;
 }
