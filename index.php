@@ -65,9 +65,12 @@ if ($routing[$page]['secure'] === true && !isset($_SESSION['user'])) {
         <link rel="stylesheet" type="text/css" href="view/css/style.css">
         <script src="controller/jquery-2.1.3.min.js"></script>
         <script src="controller/formverify.js"></script>
+        <script src="controller/script.js"></script>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
         <title>Wome</title>
     </head>
     <body>
+    <div id="navigationes">
         <div id="navigation">
             <a href="?page=home" id="logo"><img src="view/images/logo.png" alt="Logo"></a>
             <div id="menu">
@@ -79,6 +82,7 @@ if ($routing[$page]['secure'] === true && !isset($_SESSION['user'])) {
                 <a href="?page=login" class="element">Connexion</a>
             </div>
         </div>
+    </div>
 
 
 

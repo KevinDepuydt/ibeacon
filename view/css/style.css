@@ -26,11 +26,29 @@ body {
 
 /** NAVIGATION **/
 
+#navigationes{
+    width: 100%;
+    background-color: white;
+    height: 90px;
+}
+
 #navigation {
     width: 1350px;
+    /*width: 100%;*/
     margin: 0 auto;
     height: 90px;
     line-height: 90px;
+    background-color: white;
+}
+
+/* fixation de la barre de navigation*/
+
+.fixNavigation {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    /* Mise en forme */
+    width: 900px;
 }
 
 #navigation #logo {
@@ -66,7 +84,9 @@ body {
     background-color: #878f93;
     color: #dbdedf;
     border-top: 1px solid #f4f4f4;
+    /*margin-top: 90px;*/
 }
+
 
 #header .bloctext {
     height: 180px;
@@ -400,3 +420,4 @@ body {
     background-color: #00b1f6;
     cursor: pointer;
 }
+
